@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animes Légendaires</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            margin-bottom: 50px;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease-in;
+        }
+
+        .anime-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .anime-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideUp 0.6s ease-out;
+        }
+
+        .anime-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .card-header {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5em;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: inherit;
+            filter: brightness(0.8);
+            z-index: 0;
+        }
+
+        .card-header span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .dbz-header {
+            background: linear-gradient(135deg, #ff6b00 0%, #ff9500 100%);
+        }
+
+        .onepiece-header {
+            background: linear-gradient(135deg, #0066cc 0%, #00a8ff 100%);
+        }
+
+        .naruto-header {
+            background: linear-gradient(135deg, #ff6b35 0%, #ffb03b 100%);
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .info-section {
+            margin-bottom: 15px;
+        }
+
+        .info-label {
+            font-weight: bold;
+            color: #555;
+            display: inline-block;
+            min-width: 120px;
+        }
+
+        .info-value {
+            color: #666;
+        }
+
+        .description {
+            line-height: 1.6;
+            color: #444;
+            margin-top: 15px;
+            text-align: justify;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #eee;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #777;
+            margin-top: 5px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .anime-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎌 Les Animes Légendaires 🎌</h1>
+        
+        <div class="anime-grid">
+            <!-- Dragon Ball Z -->
+            <div class="anime-card">
+                <div class="card-header dbz-header">
+                    <span>⚡ DBZ ⚡</span>
+                </div>
+                <div class="card-body">
+                    <h2>Dragon Ball Z</h2>
+                    
+                    <div class="info-section">
+                        <span class="info-label">Créateur:</span>
+                        <span class="info-value">Akira Toriyama</span>
+                    </div>
+                    
+                    <div class="info-section">
+                        <span class="info-label">Période:</span>
+                        <span class="info-value">1989 - 1996</span>
+                    </div>
+                    
+                    <div class="info-section">
+                        <span class="info-label">Genre:</span>
+                        <span class="info-value">Shōnen, Action, Arts martiaux</span>
+                    </div>
+                    
+                    <p class="description">
+                        Dragon Ball Z suit les aventures de Son Goku et ses amis défendant la Terre contre des menaces extraterrestres. L'anime est célèbre pour ses combats épiques, ses transformations légendaires et son impact mondial sur la culture populaire.
+                    </p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-value">291</div>
+                            <div class="stat-label">Épisodes</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">⭐⭐⭐⭐⭐</div>
+                            <div class="stat-label">Popularité</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- One Piece -->
+            <div class="anime-card">
+                <div class="card-header onepiece-header">
+                    <span>🏴‍☠️ ONE PIECE 🏴‍☠️</span>
+                </div>
+                <div class="card-body">
+                    <h2>One Piece</h2>
+                    
+                    <div class="info-section">
+                        <span class="info-label">Créateur:</span>
+                        <span class="info-value">Eiichiro Oda</span>
+                    </div>
+                    
+                    <div class="info-section">
+                        <span class="info-label">Période:</span>
+                        <span class="info-value">1999 - Présent</span>
+                    </div>
+                    
+                    <div class="info-section">
+                        <span class="info-label">Genre:</span>
+                        <span class="info-value">Shōnen, Aventure, Fantaisie</span>
+                    </div>
+                    
+                    <p class="description">
+                        One Piece raconte l'histoire de Monkey D. Luffy et son équipage de pirates à la recherche du légendaire trésor One Piece. Avec son univers riche, ses personnages attachants et son humour unique, c'est l'un des mangas les plus vendus de tous les temps.
+                    </p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-value">1100+</div>
+                            <div class="stat-label">Épisodes</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">⭐⭐⭐⭐⭐</div>
+                            <div class="stat-label">Popularité</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Naruto -->
+            <div class="anime-card">
+                <div class="card-header naruto-header">
+                    <span>🍥 NARUTO 🍥</span>
+                </div>
+                <div class="card-body">
+                    <h2>Naruto</h2>
+                    
+                    <div class="info-section">
+                        <span class="info-label">Créateur:</span>
+                        <span class="info-value">Masashi Kishimoto</span>
+                    </div>
+                    
+                    <div class="info-section">
+                        <span class="info-label">Période:</span>
+                        <span class="info-value">2002 - 2017</span>
+                    </div>
+                    
+                    <div class="info-section">
+                        <span class="info-label">Genre:</span>
+                        <span class="info-value">Shōnen, Action, Ninja</span>
+                    </div>
+                    
+                    <p class="description">
+                        Naruto suit le parcours de Naruto Uzumaki, un jeune ninja rêvant de devenir Hokage. L'anime explore des thèmes profonds comme l'amitié, la persévérance et la rédemption, tout en offrant des combats spectaculaires et un système de techniques ninjas complexe.
+                    </p>
+                    
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-value">720</div>
+                            <div class="stat-label">Épisodes</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">⭐⭐⭐⭐⭐</div>
+                            <div class="stat-label">Popularité</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
